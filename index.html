@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="text">
+
+            <div class="container-video-text">
+
+                <video autoplay muted loop>
+                    <source src="/video.mp4">
+                </video>   
+                <h1>VERONELLI</h1>
+            </div>
+
+        </video>
+    </div>
+
+</body>
+
+    <style>
+
+        *{
+
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+
+        }
+        html,
+        body{
+
+            width: 100%;
+            height: 100%;
+
+        }
+        .container-video-text{
+
+            position: relative;
+            background: red;
+            overflow: hidden;
+        }
+        .container-video-text>video{
+
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            top: -5rem;
+            z-index: 1;
+            object-fit: cover;
+
+        }
+        #text{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        
+        }
+
+        .container-video-text>h1{
+
+            position: relative;
+            font-size: 10rem;
+            color: rgb(0, 0, 0);
+            z-index: 4;
+            background: #ffffff;
+            mix-blend-mode: screen;
+
+        }
+        @media(max-width: 720px){
+
+            .container-video-text>video{
+
+                top: -3rem;
+
+            }
+            .container-video-text>h1{
+
+                font-size: 5rem;
+
+            }
+
+        }
+        @media(max-width: 420px){
+            .container-video-text>video{
+
+                top: -1.5rem;
+
+            }
+            .container-video-text>h1{
+
+                font-size: 3rem;
+
+            }
+
+        }
+    </style>
+
+</html>
